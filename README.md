@@ -10,9 +10,9 @@ The web app will be built using Laravel, and will utilize the CSS framework for 
 The web app will also contain an admin dashboard to manage the website content and track orders for users.
 
 ### Features:
-*User authentication and account creation
-*Subscription plan selection and payment processing
-*Taylor Sewing and customization online.
+*  User authentication and account creation
+* Subscription plan selection and payment processing
+* Taylor Sewing and customization online.
 
 
 ### Target audience:
