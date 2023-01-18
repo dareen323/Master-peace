@@ -21,7 +21,7 @@ The web app will also contain an admin dashboard to manage the website content a
 ### Value proposition:
  Saving time and effort by providing all Taylors in town, and helping users find the best one sews their clothes dress online.
 
-###important links :
+### important links :
  * https://trello.com/b/fqvtkbHE/sewing-house
  * https://docs.google.com/document/d/1BbfHgGaNI6BR3BmOKqLSNviqa6ZJXu24/edit
  * https://docs.google.com/presentation/d/1NcKmthhKxMPdBgzFcAZUVOw0mK2P0GBv/edit#slide=id.p1
