@@ -26,5 +26,6 @@ The web app will also contain an admin dashboard to manage the website content a
  * https://docs.google.com/document/d/1BbfHgGaNI6BR3BmOKqLSNviqa6ZJXu24/edit
  * https://docs.google.com/presentation/d/1NcKmthhKxMPdBgzFcAZUVOw0mK2P0GBv/edit#slide=id.p1
  * https://www.figma.com/file/lpjfO0bP4WtrJHh2elSTfN/sewing?node-id=0%3A1
+ * https://docs.google.com/document/d/15-20qcRO6vfDurdkk1xNGKeXJfuE4ZlE/edit
  
 
