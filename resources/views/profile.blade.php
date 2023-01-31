@@ -5,6 +5,9 @@
 
 <style>
    
+   a{
+    color:#fff !important; 
+   }
         .ftco-footer{
             font-size: 16px;
     padding: 7em 0;
@@ -101,11 +104,13 @@
                         $user = Auth::user();
                     @endphp
                                                         @if($user->role==='Admin')
-                                                        <a class="ms-4"><a class="btn btn-outline-warning"
-                                                                            href="/admin"> Admin
+                                                        <a class="ms-4"><a class="btn btn-primary"
+                                                                            href="/admin" > Admin
                                                                 Dashboard</a></a>
                                                     @endif
-                          <button type="button" class="btn btn-primary btn-outline-primary mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" ><a href="{{route('editProfile' , $id)}}">Edit Profile</a></button>
+                                                    <a class="ms-4 mx-1"><a class="btn btn-primary"
+                                                        href="{{route('editProfile' , $id)}}" > Edit Profile</a></a>
+                          {{-- <button type="button" class="btn btn-primary mx-1" data-bs-toggle="modal" data-bs-target="#exampleModal" ><a href="{{route('editProfile' , $id)}}">Edit Profile</a></button> --}}
                           {{-- <a href="register/includes/logout.inc.php?id=2"><button type="button" class="btn btn-danger btn-outline-danger mx-1" onclick="">Logout</button></a> --}}
   
                       </div>
@@ -137,16 +142,16 @@
                       <hr>
                       <div class="row">
                           <div class="col-sm-3">
-                              <h5 class="mb-0 bw">Password:</h5>
+                              <h5 class="mb-0 bw">City:</h5>
                           </div>
                           <div class="col-sm-9">
-                              <p class="text-muted mb-0">**********</p>
+                              <p class="text-muted mb-0">Amman</p>
                           </div>
                       </div>
                       <hr>
                       <div class="row">
                           <div class="col-sm-3">
-                              <h5 class="mb-0 bw">City:</h5>
+                              <h5 class="mb-0 bw">Address:</h5>
                           </div>
                           <div class="col-sm-9">
                               <p class="text-muted mb-0">{{$userinfo->city}}</p>
@@ -162,14 +167,14 @@
                           </div>
                       </div>
                       <hr>
-                      <div class="row">
+                      {{-- <div class="row">
                           <div class="col-sm-3 bw ">
                               <h5 class="mb-0">Adress:</h5>
                           </div>
                           <div class="col-sm-9">
                               <p class="text-muted mb-0"></p>
                           </div>
-                      </div>
+                      </div> --}}
   
                   </div>
               </div>
@@ -192,16 +197,16 @@
       <div class="col-md-12">
           <div class="card mb-4 mb-md-0" style="background: rgba(255, 255, 255, 0.159); backdrop-filter: blur(2px); min-height:auto;">
               <div class="card-body">
-                  <h3>Booking History</h3>
+                  <h3>Appointment History</h3>
                   <hr>
                   <div class="table-responsive">
                       <table id="mytable" class="table table-bordred table-striped">
                           <thead class="text">
-                              <tr><th>Booking Number</th>
-                              <th>Booking state</th>
-                              <th>Booking date</th>
+                              <tr><th>Appointment Number</th>
+                              <th>Tailor name</th>
+                              <th>Appointment date</th>
                               <th>Total Price</th>
-                              <th>View Booking</th>
+                              
   
                           </tr></thead>
   
@@ -211,10 +216,10 @@
                                   <!-- Display Records -->
                                   <tr class="text">
                                       <td class="text">1</td>
-                                      <td class="text">pending</td>
+                                      <td class="text">dareen</td>
                                       <td class="text">2022-09-30 00:00:00</td>
                                       <td class="text">200 JOD</td>
-                                      <td class="text"><button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal1"> Booking Details</button></td>
+                                      {{-- <td class="text"><button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal1"> Booking Details</button></td> --}}
   
   
   
@@ -222,17 +227,17 @@
   
                               
                                   <!-- Display Records -->
-                                  <tr class="text">
+                                  {{-- <tr class="text">
                                       <td class="text">5</td>
                                       <td class="text"> Approved</td>
                                       <td class="text">2022-10-03 13:17:50</td>
                                       <td class="text">45 JOD</td>
-                                      <td class="text"><button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal5"> Confirm Now</button></td>
+                                      {{-- <td class="text"><button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal5"> Confirm Now</button></td> --}}
   
   
   
                                   </tr>
-  
+
                             
                             
                       

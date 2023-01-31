@@ -117,10 +117,8 @@ color:aliceblue;
             <img src="data:image/jpg;charset=utf8;base64,{{$tailorinfo['image']}}" alt="Image" class="img-fluid">
           </div>
           <div class="listing-item-content">
-            <a class="px-3 mb-3 category bg-primary" href="single/{{ $tailorinfo->id }}">Make appoinment </a>
-            <h2 class="mb-1"><a href="/profile
-    
-              ">{{$tailorinfo['name']}}</a></h2>
+            <a class="px-3 mb-3 category bg-primary" href="single/{{ $tailorinfo->id }}">Make appointment </a>
+            <h2 class="mb-1"><a href="/profile">{{$tailorinfo['name']}}</a></h2>
           </div>
         </div>
        </div>

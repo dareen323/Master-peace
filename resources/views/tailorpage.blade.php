@@ -3,7 +3,9 @@
 @section('content')
 
 <style>
-   
+   a{
+    color:white !important;
+   }
     .ftco-footer{
         font-size: 16px;
 padding: 7em 0;
@@ -143,7 +145,7 @@ letter-spacing: 1px;
                  <div class="media align-items-end profile-head">
                     <div class="profile mr-3">
                         @foreach($tailor as $tailorinfo)
-                       <img src="data:image/jpg;charset=utf8;base64,{{$tailorinfo['image']}}" alt="..." width="130" class="rounded mb-2 img-thumbnail"><a href="{{route('editDocProfile' , $id)}}" class="btn btn-outline-dark btn-sm btn-block">Edit profile</a>
+                       <img src="data:image/jpg;charset=utf8;base64,{{$tailorinfo['image']}}" alt="..." width="130" class="rounded mb-2 img-thumbnail"><a href="{{route('editDocProfile' , $id)}}" class="btn btn-dark btn-sm btn-block">Edit profile</a>
                     </div>
                     <div class="media-body mb-5 text-white">
                        <h4 class="mt-0 mb-0">{{$tailorinfo->name}}</h4>
@@ -172,6 +174,60 @@ letter-spacing: 1px;
                     <p class="font-italic mb-0"><b>Bio:</b>{{$tailorinfo->overview}}</p>
                  </div>
               </div>
+              <div class="row" style="justify-content: center;">
+                <div class="col-md-8">
+                    <div class="card mb-4 mb-md-0" style="background: rgba(255, 255, 255, 0.159); backdrop-filter: blur(2px); min-height:auto;">
+                        <div class="card-body">
+                            <h3>Appointment History</h3>
+                            <hr>
+                            <div class="table-responsive">
+                                <table id="mytable" class="table table-bordred table-striped">
+                                    <thead class="text">
+                                        <tr><th>Appointment Number</th>
+                                        <th>Client name</th>
+                                        <th>Appointment date</th>
+                                        <th>Description</th>
+                                        
+            
+                                    </tr></thead>
+            
+                                    <tbody>
+            
+                                        
+                                            <!-- Display Records -->
+                                            <tr class="text">
+                                                <td class="text">1</td>
+                                                <td class="text">dareen</td>
+                                                <td class="text">2022-09-30 00:00:00</td>
+                                                <td class="text">T-shirt</td>
+                                                {{-- <td class="text"><button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal1"> Booking Details</button></td> --}}
+            
+            
+            
+                                            </tr>
+            
+                                        
+                                            <!-- Display Records -->
+                                            {{-- <tr class="text">
+                                                <td class="text">5</td>
+                                                <td class="text"> Approved</td>
+                                                <td class="text">2022-10-03 13:17:50</td>
+                                                <td class="text">45 JOD</td>
+                                                {{-- <td class="text"><button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal5"> Confirm Now</button></td> --}}
+            
+            
+            
+                                            </tr>
+      
+            
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
               <div class="py-4 px-4">
                  <div class="d-flex align-items-center justify-content-between mb-3">
                     <h5 class="mb-0">Recent Works</h5>
@@ -188,4 +244,6 @@ letter-spacing: 1px;
         </div>
         @endforeach
 </div>
+
+
         @endsection

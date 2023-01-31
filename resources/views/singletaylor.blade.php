@@ -3,7 +3,9 @@
 @section('content')
 
 <style>
-   
+   a{
+    color:aliceblue !important;
+   }
     .ftco-footer{
         font-size: 16px;
 padding: 7em 0;
@@ -144,7 +146,7 @@ letter-spacing: 1px;
                     <div class="profile mr-3">
                         @foreach($tailor as $tailorinfo)
                        <img src="data:image/jpg;charset=utf8;base64,{{$tailorinfo['image']}}" alt="..." width="130" class="rounded mb-2 img-thumbnail">
-                       <a href="" class="btn btn-outline-dark btn-sm btn-block">Book Now</a>
+                       {{-- <a href="" class="btn btn-outline-dark btn-sm btn-block">Book Now</a> --}}
                     </div>
                     <div class="media-body mb-5 text-white">
                        <h4 class="mt-0 mb-0">{{$tailorinfo->name}}</h4>
@@ -160,7 +162,7 @@ letter-spacing: 1px;
               @auth
           
               <div class="bg-light p-4 d-flex justify-content-end text-center">
-                <a href="/appointment" class="btn btn-primary text-white py-3 px-4"><b>Make appoinment Now</b></a>     
+                <a href="/appointment/{{ $tailorinfo->id }}" class="btn btn-primary text-white py-3 px-4"><b>Make appoinment Now</b></a>     
                  
               </div>
               @endauth

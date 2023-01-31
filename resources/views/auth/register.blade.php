@@ -83,13 +83,13 @@
                 <div class="d-flex flex-column align-items-center justify-content-center ">
                   <h2 class="lead fw-normal mb-0 me-3">Sign Up with</h2>
                   <div>
-                  <button type="button" class="btn btn-primary btn-floating mx-1 dot">
+                  {{-- <button type="button" class="btn btn-primary btn-floating mx-1 dot">
                     <i class="fab fa-facebook-f"></i>
                   </button>
       
                   <button type="button" class="btn btn-primary btn-floating mx-1 dot">
                     <i class="fab fa-google"></i>
-                  </button>
+                  </button> --}}
       
                   </div>
                 </div>

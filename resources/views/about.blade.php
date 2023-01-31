@@ -29,11 +29,11 @@
             <div>
                 <p style="color:white">In COVID-19 dark days, the importance of online stores has
                     increased and the need to serve customers to ensure their safety
-                    and our workers' safety has emerged. Our team consists of coffee
-                    experts, baristas, and people with a passion for coffee. We import
-                    the finest coffee from all over the world, contract with the best
-                    coffee machines and equipment brands, and choose the most useful
-                    and practical accessories for you.</p>
+                    and our workers' safety has emerged. Our team consists of Tailors Online Shop introduces an online dress designing feature for modern online bespoke tailoring websites. 
+                    Using our design application idea introduced in  design, the users can design their clothes to the minutest detail and customize their outfit in thousands of ways. 
+                    Freedom to choose every component that goes into tailoring your outfit.
+
+                </p>
             </div>
         </div>
     </div>
