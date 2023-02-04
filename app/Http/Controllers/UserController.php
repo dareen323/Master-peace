@@ -30,12 +30,12 @@ class UserController extends Controller
     {
         $User = User::where('id', $id)->get();
         $appointmentsAndtailors = DB::table('tailors')->join('appointment', 'appointment.tailor_id', '=', 'tailors.id')->where('appointment.user_id', $id)->get();
-        $orders = order::where("user_id",$id)->get();
+        // $orders = order::where("user_id",$id)->get();
         // dd($orders);
         // DB::table('products')->join('orders', 'orders.product_id', '=', 'products.id')->where('orders.user_id', $id)->get();
 // dd($orders);
 
-        return view('profile', ['id' => $id, 'User' => $User, 'appointments' => $appointmentsAndtailors, 'orders' => $orders]);
+        return view('profile', ['id' => $id, 'User' => $User, 'appointments' => $appointmentsAndtailors]);
 
     }
 
@@ -52,14 +52,13 @@ class UserController extends Controller
             'Name' => 'required',
             'Email' => 'required',
             'City',
-
-            'password' => ['required', Rules\Password::defaults()],
+            // 'password' => ['required', Rules\Password::defaults()],
 
         ]);
 
         // Hash::make($request->password)
         $Password = request('Password');
-        User::where('id', $id)->update(['name' => request('Name'), 'email' => request('Email'), 'city' => request('City') ,'password' => Hash::make($request->password)]);
+        User::where('id', $id)->update(['name' => request('Name'), 'email' => request('Email'), 'city' => request('City') ,'address' => request('address'),'phone' => request('phone') ]);
 
         return redirect("/userprofile/$id")->with('mssg', 'Personal information updated successfully');
 

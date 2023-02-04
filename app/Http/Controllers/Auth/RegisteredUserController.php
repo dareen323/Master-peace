@@ -77,10 +77,15 @@ class RegisteredUserController extends Controller
     {
 
         $image = base64_encode(file_get_contents($request->file('image')));
-        // $certificate = base64_encode(file_get_contents($request->file('certificate')));
+        // dd($request);
+        // $work1 = base64_encode(file_get_contents($request->file('work1')));
+        // $work2 = base64_encode(file_get_contents($request->file('work2')));
 $phone='phone';
 $available_time='available_time';
-
+$city='city';
+$phone='phone';
+$adress='adress';
+$overview='overview';
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -94,12 +99,16 @@ $available_time='available_time';
         $tailor = Tailor::create([
             'name' => $request->name,
             'email' => $request->email,
-            'image' => $request->$image,
+            'image' =>$image,
             'phone' => $request->$phone,
+            'adress'=>$request->$adress,
             'available_time' =>$request-> $available_time,
             'password' => Hash::make($request->password),
-            'overview' => $request->overview,
-            // 'department_id' => $request->department
+            'overview' => $request->$overview,
+            'city' => $request->$city,
+            // 'work1'=> $request->$work1,
+            // 'work2'=> $request->$work2
+
         ]);
 
         $request->validate([

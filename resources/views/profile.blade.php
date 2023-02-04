@@ -95,7 +95,7 @@
                     @foreach($User as $userinfo)
                       <img src="{{asset('img/user.png')}}" alt="avatar" class="rounded-circle img-fluid" style="width: 150px; height:148px">
                       <h5 class="my-3 text-dark ">{{$userinfo->name}}</h5>
-                      <p class="text-muted mb-1">{{$userinfo->role}}</p>
+                      {{-- <p class="text-muted mb-1">{{$userinfo->role}}</p> --}}
                       {{-- <p class="text-muted mb-4">{{$userinfo->name}}</p> --}}
                       <div class="d-flex justify-content-center mb-2">
                         @php
@@ -145,7 +145,7 @@
                               <h5 class="mb-0 bw">City:</h5>
                           </div>
                           <div class="col-sm-9">
-                              <p class="text-muted mb-0">Amman</p>
+                              <p class="text-muted mb-0">{{$userinfo->city}}</p>
                           </div>
                       </div>
                       <hr>
@@ -154,7 +154,7 @@
                               <h5 class="mb-0 bw">Address:</h5>
                           </div>
                           <div class="col-sm-9">
-                              <p class="text-muted mb-0">{{$userinfo->city}}</p>
+                              <p class="text-muted mb-0">{{$userinfo->address}}</p>
                           </div>
                       </div>
                       <hr>
@@ -163,7 +163,7 @@
                               <h5 class="mb-0">phone number:</h5>
                           </div>
                           <div class="col-sm-9">
-                              <p class="text-muted mb-0">0775582555 </p>
+                              <p class="text-muted mb-0">0{{$userinfo->phone}} </p>
                           </div>
                       </div>
                       <hr>
@@ -202,23 +202,25 @@
                   <div class="table-responsive">
                       <table id="mytable" class="table table-bordred table-striped">
                           <thead class="text">
-                              <tr><th>Appointment Number</th>
+                              <tr><th> #</th>
                               <th>Tailor name</th>
+                              <th>Appointment time</th>
                               <th>Appointment date</th>
-                              <th>Total Price</th>
+                              <th>Description</th>
                               
   
                           </tr></thead>
-  
+                         @foreach($appointments as $appointment) 
                           <tbody>
   
                               
                                   <!-- Display Records -->
                                   <tr class="text">
-                                      <td class="text">1</td>
-                                      <td class="text">dareen</td>
-                                      <td class="text">2022-09-30 00:00:00</td>
-                                      <td class="text">200 JOD</td>
+                                      <td class="text"></td>
+                                      <td class="text">{{$appointment->name}}</td>
+                                      <td class="text">{{$appointment->time}}pm</td>
+                                      <td class="text">{{$appointment->appointment_time}}</td>
+                                      <td class="text">{{$appointment->description}}</td>
                                       {{-- <td class="text"><button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal1"> Booking Details</button></td> --}}
   
   
@@ -249,6 +251,7 @@
                               
   
                           </tbody>
+                          @endforeach
                       </table>
                   </div>
               </div>

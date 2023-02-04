@@ -82,7 +82,7 @@
 
         <x-auth-card>
             <x-slot name="logo">
-                <h3 class="h3">Register as Tailor</h3>
+                <h3 class="h3" style="color:#4e4747">Register as Tailor</h3>
             </x-slot>
 
             <form method="POST" action="{{ route('storeDoc') }}" enctype="multipart/form-data">
@@ -110,14 +110,29 @@
 
 
                 <div class="mt-4">
-                    <x-input-label for="image" :value="__('image')"/>
+                    <x-input-label for="image" :value="__('profile picture')"/>
 
                     <x-text-input id="image" class="block mt-1 w-full" type="file" name="image" :value="old('image')"
                                   required/>
 
                     <x-input-error :messages="$errors->get('image')" class="mt-2"/>
                 </div>
+                <div class="mt-4">
+                  {{-- <x-input-label for="image" :value="__('Your work 1')"/> --}}
 
+                  <x-text-input id="image" class="block mt-1 w-full" type="file" name="work1" :value="old('work1')"
+                            hidden    />
+
+                  <x-input-error :messages="$errors->get('image')" class="mt-2"/>
+              </div>
+              <div class="mt-4">
+                {{-- <x-input-label for="image" :value="__('Your work 2')"/> --}}
+
+                <x-text-input id="image" class="block mt-1 w-full" type="file" name="work2" :value="old('work2') "hidden
+                              />
+
+                <x-input-error :messages="$errors->get('image')" class="mt-2"/>
+            </div>
 
                 {{-- <div class="mt-4">
                     <x-input-label for="certificate" :value="__('certificate')"/>
@@ -132,8 +147,8 @@
                 <div class="mt-4">
                     <x-input-label for="available_time" :value="__('available_time')"/>
 
-                    <x-text-input id="available_time" class="block mt-1 w-full" type="text" name="available_time"
-                                  :value="old('available_time')" required/>
+                    <x-text-input id="available_time" class="block mt-1 w-full" type="text" name="available_time" 
+                                  :value="old('available_time')" />
 
                     <x-input-error :messages="$errors->get('available_time')" class="mt-2"/>
                 </div>
@@ -141,7 +156,7 @@
                 <div class="mt-4">
                     <x-input-label for="overview" :value="__('phone')"/>
 
-                    <x-text-input id="phone" class="block mt-1 w-full" type="number" name="text" required>
+                    <x-text-input id="phone" class="block mt-1 w-full" type="number" name="phone" required :value="old('phone')">
 
                     </x-text-input>
 
@@ -150,20 +165,37 @@
 
 
 
+
                 <div class="mt-4">
-                    <x-input-label for="overview" :value="__('overview')"/>
+                  <x-input-label for="overview" :value="__('city')"/>
 
-                    <textarea id="overview" class="block mt-1 w-full" type="date" name="overview" required>
+                  <x-text-input id="city" class="block mt-1 w-full" type="text" name="city" required :value="old('city')">
 
-                    </textarea>
+                  </x-text-input>
 
-                    <x-input-error :messages="$errors->get('overview')" class="mt-2"/>
-                </div>
+                  <x-input-error :messages="$errors->get('overview')" class="mt-2"/>
+              </div>
+              <div class="mt-4">
+                <x-input-label for="overview" :value="__('address')"/>
 
+                <x-text-input id="adress" class="block mt-1 w-full" type="text" name="adress" required :value="old('adress')">
 
+                </x-text-input>
+
+                <x-input-error :messages="$errors->get('overview')" class="mt-2"/>
+            </div>
+            <div class="mt-4">
+              <x-input-label for="overview" :value="__('Bio')"/>
+
+              <textarea id="overview" class="block mt-1 w-full" type="date" name="overview" required :value="old('overview')">
+
+              </textarea>
+
+              <x-input-error :messages="$errors->get('overview')" class="mt-2"/>
+          </div>
                 <!-- Password -->
                 <div class="mt-4">
-                    <x-input-label for="password" :value="__('Password')"/>
+                    <x-input-label for="password" :value="__('Password')" />
 
                     <x-text-input id="password" class="block mt-1 w-full"
                                   type="password"

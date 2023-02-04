@@ -49,7 +49,7 @@
                   <div class="container">
             
                    
-                    <a class="navbar-brand" href="/"><span > <img src="./../../../images1/sewing-house-low-resolution-logo-white-on-transparent-background (1).png" style="width:100px"></span><small></small></a>
+                    <a class="navbar-brand" href="/"><span > <img src="./../../../images1/1.png" style="width:100px"></span><small></small></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="oi oi-menu"></span> Menu
                     </button>

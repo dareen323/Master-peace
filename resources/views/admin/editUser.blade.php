@@ -17,18 +17,17 @@
         </div>
         <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" name="password">
+            <input type="password" class="form-control" id="password" name="password" value="{{$user['password']}}">
         </div>
-        <div class="mb-3">
+        {{-- <div class="mb-3">
             <label for="confirmPassword" class="form-label">Confirm Password</label>
             <input type="password"  class="form-control" id="confirmPassword" name="confirmPassword">
-        </div>
+        </div> --}}
         <div class="mb-3">
             <label for="role" class="form-label">Select Role</label>
-            <select class="form-select" aria-label="Default select example" id="role" name="role">
-                <option value="admin">Admin</option>
-                <option value="user">Users</option>
-            </select>
+            <input type="text" class="form-select" aria-label="Default select example" id="role" name="role">
+
+           
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

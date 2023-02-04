@@ -50,24 +50,25 @@
         </div>
         {{-- <div class="col-md-1"></div> --}}
         <div class="col-md-8 ftco-animate fadeInUp ftco-animated">
-          <form action="#" class="contact-form">
+          <form action="/contact" class="contact-form" method="POST">
+            @csrf
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" class="form-control" placeholder="Your Name" required="" id="name" name="name">
                 </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Your Email" required="">
+                  <input type="text" class="form-control" placeholder="Your Email" required="" id="email" name="email">
                 </div>
               </div>
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Subject" required="">
+              <input type="text" class="form-control" placeholder="Subject" required="" id="subject" name="subject">
             </div>
             <div class="form-group">
-              <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+              <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="message"></textarea>
             </div>
             <div class="form-group">
               <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5" required="">

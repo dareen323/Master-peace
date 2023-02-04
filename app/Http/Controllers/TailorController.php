@@ -52,39 +52,37 @@ class TailorController extends Controller
         $request->validate([
             'Name' => ['required', 'string', 'max:255'],
             'Email' => ['required', 'string', 'email', 'max:255'],
-            'Available' => ['required'],
             'Password' => ['required'],
+            'available_time' => ['required'],
+            'city' => ['required'],
+            'adress' => ['required'],
+            'phone' => ['required'],
+           
 
 
         ]);
-        if ($request->file('Personal') && $request->file('Certificate')) {
+        if ($request->file('Personal')&& $request->file('work1') && $request->file('work2')) {
 
 
             $image = base64_encode(file_get_contents($request->file('Personal')));
-            $Certificate = base64_encode(file_get_contents($request->file('Certificate')));
+            $work1 = base64_encode(file_get_contents($request->file('work1')));
+            $work2 = base64_encode(file_get_contents($request->file('work2')));
 
-            tailor::where('id', $id)->update(['name' => request('Name'), 'password' => Hash::make($request->password), 'available_time' => request('Available'), 'image' => $image, 'certificate' => $Certificate]);
+            tailor::where('id', $id)->update(['name' => request('Name'), 'password' => Hash::make($request->password), 'available_time' => request('available_time'), 'image' => $image, 'work1'=>$work1,'work2'=>$work2 ,'city'=>request('city'), 'adress'=>request('adress'),'phone'=>request('phone')]);
 
             return redirect("/tailorprofile/$id")->with('mssg', 'Personal information updated successfully');
 
          }elseif ($request->file('Personal')) {
 
             $image = base64_encode(file_get_contents($request->file('Personal')));
+            $work1 = base64_encode(file_get_contents($request->file('work1')));
+            $work2 = base64_encode(file_get_contents($request->file('work2')));
 
 
-            tailor::where('id', $id)->update(['name' => request('Name'), 'email' => request('Email'), 'password' => Hash::make($request->password), 'available_time' => request('Available'), 'image' => $image]);
-
-            return redirect("/tailorprofile/$id")->with('mssg', 'Personal information updated successfully');
-        } elseif ($request->file('Certificate')) {
-
-            $Certificate = base64_encode(file_get_contents($request->file('Certificate')));
-
-
-
-            tailor::where('id', $id)->update(['name' => request('Name'), 'email' => request('Email'), 'password' => Hash::make($request->password), 'available_time' => request('Available'), 'certificate' => $Certificate]);
+            tailor::where('id', $id)->update(['name' => request('Name'), 'email' => request('Email'), 'password' => Hash::make($request->password), 'available_time' => request('available_time'), 'image' => $image,'work1'=>$work1,'work2'=>$work2 ,'city'=>$city, 'adress'=>$adress,'phone'=>$phone]);
 
             return redirect("/tailorprofile/$id")->with('mssg', 'Personal information updated successfully');
-        }
+        } 
     }
 
     /**

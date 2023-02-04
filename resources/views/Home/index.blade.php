@@ -321,10 +321,10 @@
             <div class="book p-4">
                     <h1 style="color:white;" >Do you want To be apart of our Family?</h1>
                     <div class="d-md-flex">
-                        <h4 style="color:white;">Join us and start  <meta property="twitter:description" content="#description"><meta property="twitter:description" content="#description">Book best Tailors for your dress</h4>
+                        <h4 style="color:white;">be the best <meta property="twitter:description" content="#description"><meta property="twitter:description" content="#description">show the people your sewing skills </h4>
                     </div>
                     <div>
-                        <a href="./login" class="btn btn-white py-2 px-3"> Book Now!</a>
+                        <a href="./registertailor" class="btn btn-white py-2 px-3"> join Now!</a>
                     </div>
                 </div>
             </div>
@@ -345,9 +345,9 @@
               <img src="https://html.tonatheme.com/2022/tayler/assets/images/resource/image-11.jpg" alt="Image" class="img-fluid">
             </div>
             <div class="listing-item-content">
-              <a class="px-3 mb-3 category bg-primary" href="/profile
+              <a class="px-3 mb-3 category bg-primary" href="/tailor
               ">Make appoinment </a>
-              <h2 class="mb-1"><a href="/profile
+              <h2 class="mb-1"><a href="/tailor
                 ">Omar Ahmad</a></h2>
             </div>
           </div>
@@ -359,10 +359,10 @@
               <img src="https://html.tonatheme.com/2022/tayler/assets/images/resource/image-12.jpg" alt="Image" class="img-fluid">
             </div>
             <div class="listing-item-content">
-              <a class="px-3 mb-3 category bg-primary" href="/profile
+              <a class="px-3 mb-3 category bg-primary" href="/tailor
               ">Make appoinment
               </a>
-              <h2 class="mb-1"><a href="/profile
+              <h2 class="mb-1"><a href="/tailor
                 ">Ahmad Ibrahim</a></h2>
             </div>
           </div>
@@ -374,9 +374,9 @@
               <img src="https://html.tonatheme.com/2022/tayler/assets/images/resource/image-13.jpg" alt="Image" class="img-fluid">
             </div>
             <div class="listing-item-content">
-              <a class="px-3 mb-3 category bg-primary" href="/profile
+              <a class="px-3 mb-3 category bg-primary" href="/tailor
               ">Make appoinment</a>
-              <h2 class="mb-1"><a href="/profile
+              <h2 class="mb-1"><a href="/tailor
                 ">Abdulla Essam</a></h2>
             </div>
           </div>

@@ -13,7 +13,7 @@
         <th scope="col">tailor Name</th>
         <th scope="col">User Name</th>
         <th scope="col">Appointment Time</th>
-        <th scope="col">edit/delete</th>
+        <th scope="col">delete</th>
 
         {{-- <th scope="col">Actions</th> --}}
     </tr>
@@ -34,8 +34,8 @@
             <td>{{$appointment->appointment_time}}</td>
              <td>  
                  <div>
-                    <a class="fa-solid fa-user-pen me-2"  style="color:green" href="editAppointment/{{$appointment->id}}"></a>
-                   <a class="fa-solid fa-trash"  style="color: red"  onclick="deleteAppointment(this,{{$appointment->id}})"></a>
+                    {{-- <a class="fa-solid fa-user-pen me-2"  style="color:green" href="editAppointment/{{$appointment->id}}"></a> --}}
+                   <a class="fa-solid fa-trash"  style="color: red; cursor: pointer;"  onclick="deleteAppointment(this,{{$appointment->id}})"></a>
                 </div>
             </td>
             </td>

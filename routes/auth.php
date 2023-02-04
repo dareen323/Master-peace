@@ -14,7 +14,7 @@ Route::middleware('guest')->group(function () {
     
     Route::get('registertailor', [RegisteredUserController::class, 'createDoc'])
                 ->name('registertailor');
-
+ 
 
     Route::post('storeDoc', [RegisteredUserController::class, 'storeDoc'])->name("storeDoc");
 

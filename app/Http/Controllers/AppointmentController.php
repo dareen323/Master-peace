@@ -6,7 +6,8 @@ use App\Models\User;
 use App\Models\tailor;
 use App\Models\appointment;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
+//  use App\Http\Controllers\Auth;
 class AppointmentController extends Controller
 {
     /**
@@ -26,27 +27,34 @@ class AppointmentController extends Controller
         return view('appointment', ['id' => $id, 'availableForDepartment' => $availableForDepartment]);
     }
 
-    public function appointmentStore(Request $request, $id)
+    public function appointmentStore(Request $request,$id)
     {
 
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-           
-        ]);
-
         $appointment = new appointment();
+        $request->validate([
+           'date'=>['required'],
+           'time'=>['required'],
+        ]);
+        $appointment->user_id = Auth::user()->id;
+        $appointment->tailor_id = $id;
 
 
+        $appointment->appointment_time = request('date');
+        $appointment->time = request('time');
+        $appointment->description = request('description');
+        // $appointment->appointment_time = $appointment_time;
+        // $email = request('email');
+        // $user = User::where('email', $email)->get();
+        // $user_id = $user[0]->id;
 
-        $email = request('email');
-        $user = User::where('email', $email)->get();
-        $user_id = $user[0]->id;
-
-
-        $appointment->user_id = $user_id;
-        $time = explode(',', request('time'));
-        $appointment->appointment_time = $time[0];
-
+        // $time = explode(',', $request->appointment_time);
+                // dd($request->appointment_time);
+     
+                // $appointment->user_id = $user_id;
+                // $time = explode(',', request('time'));
+             
+        
+        // $appointment->tailor_id = $request->tailor_id;
         // select random_int ((select all from tailors where department_id= $id and available_time =$appointment->appointment_time)) then push id number foreeach inside array then select random number from an array
         // $availabletailors = tailor::where([
         //     ['department_id', "$id"],
@@ -64,8 +72,8 @@ class AppointmentController extends Controller
         // $rand_id = array_rand($ArrayofIDs, 1);
         // $rand_id++;
 
+        // $appointment->_id = $time[1];
 
-        $appointment->tailor_id = $time[1];
         $appointment->save();
 
         return redirect("/")->with('mssg', 'Your appointment has been booked successfully');

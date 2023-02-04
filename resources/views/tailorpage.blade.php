@@ -155,10 +155,10 @@ letter-spacing: 1px;
               </div>
               <div class="bg-light p-4 d-flex justify-content-end text-center">
                  <ul class="list-inline mb-0">
-                    <li class="list-inline-item">
+                    {{-- <li class="list-inline-item">
                        <h5 class="font-weight-bold mb-0 d-block">215</h5>
                        <small class="text-muted"> <i class="fas fa-image mr-1"></i>Works</small> 
-                    </li>
+                    </li> --}}
                     <li class="list-inline-item">
                        <h5 class="font-weight-bold mb-0 d-block">745</h5>
                        <small class="text-muted"> <i class="fas fa-user mr-1"></i>Appoinment</small> 
@@ -169,9 +169,11 @@ letter-spacing: 1px;
               <div class="px-4 py-3">
                  <h5 class="mb-0">About</h5>
                  <div class="p-4 rounded shadow-sm bg-light">
-                    <p class="font-italic mb-0"><b>Mobile:</b>{{$tailorinfo->phone}}</p>
+                    <p class="font-italic mb-0"><b>Mobile:</b>0{{$tailorinfo->phone}}</p>
                     <p class="font-italic mb-0"> <b>Available time:</b>{{$tailorinfo->available_time}}</p>
                     <p class="font-italic mb-0"><b>Bio:</b>{{$tailorinfo->overview}}</p>
+                    <p class="font-italic mb-0"><b>Address:</b>{{$tailorinfo->adress}}</p>
+
                  </div>
               </div>
               <div class="row" style="justify-content: center;">
@@ -183,23 +185,23 @@ letter-spacing: 1px;
                             <div class="table-responsive">
                                 <table id="mytable" class="table table-bordred table-striped">
                                     <thead class="text">
-                                        <tr><th>Appointment Number</th>
                                         <th>Client name</th>
+                                        <th>Appointment time</th>
                                         <th>Appointment date</th>
                                         <th>Description</th>
                                         
             
                                     </tr></thead>
-            
+                                    @foreach($appointmentsAndusers as $appointment)
                                     <tbody>
             
                                         
                                             <!-- Display Records -->
                                             <tr class="text">
-                                                <td class="text">1</td>
-                                                <td class="text">dareen</td>
-                                                <td class="text">2022-09-30 00:00:00</td>
-                                                <td class="text">T-shirt</td>
+                                                <td class="text">{{$appointment->name}}</td>
+                                                <td class="text">{{$appointment->time}}pm</td>
+                                                <td class="text">{{$appointment->appointment_time}}</td>
+                                                <td class="text">{{$appointment->description}}</td>
                                                 {{-- <td class="text"><button class="btn btn-primary " data-bs-toggle="modal" data-bs-target="#exampleModal1"> Booking Details</button></td> --}}
             
             
@@ -221,6 +223,8 @@ letter-spacing: 1px;
       
             
                                     </tbody>
+                                    @endforeach
+
                                 </table>
                             </div>
                         </div>
@@ -234,10 +238,10 @@ letter-spacing: 1px;
                     <a href="#" class="btn btn-link text-muted">Show all</a> 
                  </div>
                  <div class="row">
-                    <div class="col-lg-6 mb-2 pr-lg-1"><img src="https://images.unsplash.com/photo-1469594292607-7bd90f8d3ba4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" class="img-fluid rounded shadow-sm"></div>
-                    <div class="col-lg-6 mb-2 pl-lg-1"><img src="https://images.unsplash.com/photo-1493571716545-b559a19edd14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" class="img-fluid rounded shadow-sm"></div>
-                    <div class="col-lg-6 pr-lg-1 mb-2"><img src="https://images.unsplash.com/photo-1453791052107-5c843da62d97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="" class="img-fluid rounded shadow-sm"></div>
-                    <div class="col-lg-6 pl-lg-1"><img src="https://images.unsplash.com/photo-1475724017904-b712052c192a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" class="img-fluid rounded shadow-sm"></div>
+                    <div class="col-lg-6 mb-2 pr-lg-1"><img src="data:image/jpg;charset=utf8;base64,{{$tailorinfo['work1']}}"alt="" class="img-fluid rounded shadow-sm"></div>
+                    <div class="col-lg-6 mb-2 pl-lg-1"><img src="data:image/jpg;charset=utf8;base64,{{$tailorinfo['work2']}}" alt="" class="img-fluid rounded shadow-sm"></div>
+                    {{-- <div class="col-lg-6 pr-lg-1 mb-2"><img src="https://images.unsplash.com/photo-1453791052107-5c843da62d97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="" class="img-fluid rounded shadow-sm"></div> --}}
+                    {{-- <div class="col-lg-6 pl-lg-1"><img src="https://images.unsplash.com/photo-1475724017904-b712052c192a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" class="img-fluid rounded shadow-sm"></div> --}}
                  </div>
               </div>
            </div>

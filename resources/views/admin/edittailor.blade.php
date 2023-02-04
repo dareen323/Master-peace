@@ -17,32 +17,37 @@
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password">
+                <input type="password" class="form-control" id="password" name="password"value="{{$tailor['password']}}" >
             </div>
-            <div class="mb-3">
+            {{-- <div class="mb-3">
                 <label for="confirmPassword" class="form-label">Confirm Password</label>
                 <input type="password"  class="form-control" id="confirmPassword" name="confirmPassword">
-            </div>
+            </div> --}}
             <div class="mb-3">
                 <label for="image" class="form-label">Profile Image</label>
-                <input type="file"  class="form-control" id="image" name="image">
+                <input type="file"  class="form-control" id="image" name="image" value="{{$tailor['image']}}">
             </div>
-            <div class="mb-3">
-                <label for="certificate" class="form-label">Certificate</label>
-                <input type="file"  class="form-control" id="certificate" name="certificate">
-            </div>
+          
             <div class="mb-3">
                 <label for="available_time" class="form-label">Available time</label>
-                <input type="date" id="available_time" name="available_time">
+                <input type="text" id="available_time" name="available_time" value="{{$tailor['available_time']}}">
             </div>
             <div class="mb-3">
+                <label for="available_time" class="form-label">City</label>
+                <input type="text" id="available_time" name="city" value="{{$tailor['city']}}">
+            </div>
+            <div class="mb-3">
+                <label for="available_time" class="form-label">Phone</label>
+                <input type="text" id="available_time" name="phone"value="{{$tailor['phone']}}" >
+            </div>
+            {{-- <div class="mb-3">
                 <label for="role" class="form-label">Status</label>
                 <select class="form-select" aria-label="Default select example" id="role" name="status">
                     <option value="Pending">Pending</option>
                     <option value="Approve">Approve</option>
                     <option value="Deny">Deny</option>
                 </select>
-            </div>
+            </div> --}}
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>

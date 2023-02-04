@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('without')
 
 @section('style')
 
@@ -53,28 +53,47 @@
 
                                     <div class="mb-3">
                                         <label class="mb-2" for="available">Select Availability</label>
-                                        <input type="text" class="form-control" name="Available" id="available"
+                                        <input type="text" class="form-control" name="available_time" id="available"
                                                value="{{$tailorinfo->available_time}}" aria-describedby="Password">
 
                                     </div>
                                     <div class="mb-3">
                                         <label for="Certificate" class="form-label">Bio</label>
-                                        <input type="text" class="form-control" id="Certificate" name="Certificate"
+                                        <input type="text" class="form-control" id="Certificate" name="overview"
                                                value="{{$tailorinfo->overview}}" aria-describedby="">
                                     </div>
                                     <div class="mb-3">
                                         <label for="Certificate" class="form-label">City</label>
-                                        <input type="text" class="form-control" id="Certificate" name="Certificate"
+                                        <input type="text" class="form-control" id="Certificate" name="city"
                                                value="{{$tailorinfo->city}}" aria-describedby="">
                                     </div>
-
+                                    <div class="mb-3">
+                                        <label for="Certificate" class="form-label">address</label>
+                                        <input type="text" class="form-control" id="Certificate" name="adress"
+                                               value="{{$tailorinfo->adress}}" aria-describedby="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="Certificate" class="form-label">Phone</label>
+                                        <input type="number" class="form-control" id="Certificate" name="phone"
+                                               value="{{$tailorinfo->phone}}" aria-describedby="">
+                                    </div>
+                                  
                                     <div class="mb-3">
                                         <label for="Personal" class="form-label">Personal Photo</label>
                                         <input type="file" class="form-control" id="Personal" name="Personal"
                                                value="{{$tailorinfo->image}}" aria-describedby="">
                                     </div>
 
-
+                                    <div class="mb-3">
+                                        <label for="Personal" class="form-label"> your work 1</label>
+                                        <input type="file" class="form-control" id="Personal" name="work1"
+                                               value="{{$tailorinfo->work1}}" aria-describedby="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="Personal" class="form-label">your work 2</label>
+                                        <input type="file" class="form-control" id="Personal" name="work2"
+                                               value="{{$tailorinfo->work2}}" aria-describedby="">
+                                    </div>
 
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 @endforeach

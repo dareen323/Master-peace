@@ -6,11 +6,9 @@
 
 <style>
   .listing-item{
-    background: #679692;
+    /* background: #679692; */
   }
-    .ftco-navbar-light .navbar-brand{
-  color: #343a40;
-}
+  
 #ftco-navbar :hover{
 /* color:#679692; */
   }
@@ -27,9 +25,7 @@ color:aliceblue;
     .ftco-navbar-light .navbar-nav > .nav-item.cart > a .icon{
     color:#4e4747;
   }
-    .ftco-navbar-light .navbar-nav > .nav-item > .nav-link{
-        color:#000;
-    }
+    
 	span{
         color:#343a40;
     }
@@ -41,7 +37,9 @@ color:aliceblue;
 
 		transform: scale(1.1);
 	}
-
+  .ftco-navbar-light.scrolled .nav-item > .nav-link{
+    color:#fff !important;
+  }
 	.ftco-services1, .ftco-gallery {
 	background-color:#f6f5f5;
    }
@@ -60,15 +58,15 @@ color:aliceblue;
    h2{
 	color:#679692;
    }
-   .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
+   /* .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
     color:#f6f5f5 !important;
-   }
+   } */
    .listing-item .listing-item-content .category{
    font-size: 12px;
     display: inline-block;
     padding: 5px 30px;
     background: #efba6c;
-    border-radius: 30px;
+    /* border-radius: 30px; */
     color: #fff;
     letter-spacing: .2em;
     text-transform: uppercase;}
@@ -94,9 +92,13 @@ color:aliceblue;
 		font-size:18px;
 		color:white;
 	}
-	.listing-item-content h2 a {
-    color: #fff;}
- 
+  .listing-item .listing-item-content .category{
+    font-weight: 800;
+
+  }    
+  /* background-color: #679692; */
+  /* padding:5px */
+
 </style>
 
 
@@ -117,8 +119,10 @@ color:aliceblue;
             <img src="data:image/jpg;charset=utf8;base64,{{$tailorinfo['image']}}" alt="Image" class="img-fluid">
           </div>
           <div class="listing-item-content">
-            <a class="px-3 mb-3 category bg-primary" href="single/{{ $tailorinfo->id }}">Make appointment </a>
-            <h2 class="mb-1"><a href="/profile">{{$tailorinfo['name']}}</a></h2>
+            <h2 class="mb-1"><a href="single/{{ $tailorinfo->id }}"></a></h2>
+            <h5 class="mb-1"><a href="single/{{ $tailorinfo->id }}" style="color:rgb(255, 255, 255)"></a></h5>
+            <a class="px-3 mb-3 category bg-primary" href="single/{{ $tailorinfo->id }}">{{$tailorinfo['name']}}<br>"{{$tailorinfo['city']}}"<br>make an appoinment</a>
+
           </div>
         </div>
        </div>

@@ -34,7 +34,7 @@
                     <td>
                         <div>
                             <a class="fa-solid fa-user-pen me-2" style="color:green" href="editUser/{{$user['id']}}"></a>
-                            <a class="fa-solid fa-trash" style="color: red" onclick="deleteUser(this,{{$user['id']}})"></a>
+                            <a class="fa-solid fa-trash" style="color: red; cursor: pointer;" onclick="deleteUser(this,{{$user['id']}})"></a>
                         </div>
                     </td>
                 </tr>

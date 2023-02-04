@@ -18,10 +18,12 @@ class Tailor extends Authenticatable
         'email',
         'password',
         "available_time",
-        "certificate",
         "image",
         'overview',
-        'department_id'
+        'city',
+        'phone',
+        'adress',
+    
     ];
 
 

@@ -16,6 +16,7 @@ use App\Http\Controllers\DonationController;
 use App\Http\Controllers\AppointmentController;
 use App\Http\Controllers\DepartmentsController;
 
+//  use App\Http\Controllers\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,19 +58,22 @@ Route::get('/about', function () {
     return view('about');
 });
 
-
+// Route::get('/404', function () {
+//     return view('404');
+// });
 
 // contact page
 Route::get('/contact', function () {
     return view('Contact');
 
 });
-// Route::post('/contact' , [contactController::class, 'store']);
+Route::post('/contact' , [contactController::class, 'store']);
 
 
 
 // appointment
-Route::get('/appointment', [AppointmentController::class, 'index'])->middleware('auth');
+
+// Route::get('/appointment', [AppointmentController::class, 'index'])->middleware('auth');
 Route::get('/appointment/{id}', [AppointmentController::class, 'appointmentPage'])->name('appointmentPage')->middleware('auth');
 Route::post('/appointment/store/{id}', [AppointmentController::class, 'appointmentStore'])->name('appointmentStore');
 
@@ -90,7 +94,7 @@ Route::get('/orderSave/{names}/{inputId}/{inputCity}/{inputPhone}/{inputAddress}
 
 // admin dashboard
 
-Route::get('/admin', [AdminController::class, 'index'])->middleware(['auth', 'verified']);
+Route::get('/admin', [AdminController::class, 'index'])->middleware(['can:Admin']);
 Route::get('/admin/editUser/{id}', [AdminController::class, 'editUser'])->middleware('can:Admin');
 Route::post('/admin/storeEdit/{id}', [AdminController::class, 'storeEdit']);
 
@@ -103,7 +107,7 @@ Route::post('/admin/storeEditOrder/{id}', [AdminController::class, 'storeEditOrd
 
 Route::get('/admin/delete/{id}', [AdminController::class, 'destroy'])->middleware('can:Admin');
 Route::get('/admin/deletetailor/{id}', [AdminController::class, 'deletetailor'])->middleware('can:Admin');
-Route::get('/admin/deleteOrder/{id}', [AdminController::class, 'deleteOrder'])->middleware('can:Admin');
+Route::get('/admin/deletecontact/{id}', [AdminController::class, 'deletecontact'])->middleware('can:Admin');
 
 Route::get('/admin/alltailor', [AdminController::class, 'alltailor'])->middleware('can:Admin');
 Route::get('/admin/allUsers', [AdminController::class, 'allUsers'])->middleware('can:Admin');
@@ -129,7 +133,7 @@ Route::get('/admin/editDepartment/{id}',[AdminController::class,'editDepartment'
 Route::put('/admin/storeEditDepartment/{id}',[AdminController::class,'storeEditDepartment']);
 
 
-Route::get('/admin/allDonations',[AdminController::class,'allDonations'])->middleware('can:Admin');
+Route::get('/admin/allContact',[AdminController::class,'allContact'])->middleware('can:Admin');
 
 
 

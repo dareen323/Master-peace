@@ -54,7 +54,7 @@ class contactController extends Controller
         // to save data in database
         $contact->save();
 
-        return redirect("/Contact");
+        return redirect("/")->with('mssg', 'Thank you');
     }
 
     /**

@@ -6,7 +6,7 @@ use App\Models\User;
 use App\Models\Order;
 use App\Models\tailor;
 use App\Models\product;
-use App\Models\Donation;
+use App\Models\contact;
 use App\Models\appointment;
 use App\Models\departments;
 use Illuminate\Http\Request;
@@ -27,11 +27,11 @@ class AdminController extends Controller
         $NumallAppointments = count(appointment::all());
         $NumallProducts = count(product::all());
         $NumallDepartments = count(departments::all());
-        $sum = Donation::sum('donationAmount');
+        // $sum = Donation::sum('donationAmount');
+        $NumallContact = count(contact::all());
 
 
-
-        return view('admin.overview', ['NumallUsers' => $NumallUsers, 'Numalltailors' => $Numalltailors, 'NumallOrders' => $NumallOrders, 'NumallAppointments' => $NumallAppointments, 'NumallProducts' => $NumallProducts , 'NumallDepartments'=>$NumallDepartments , 'donationAmount' => $sum]);
+        return view('admin.overview', ['NumallUsers' => $NumallUsers, 'Numalltailors' => $Numalltailors, 'NumallOrders' => $NumallOrders, 'NumallAppointments' => $NumallAppointments, 'NumallProducts' => $NumallProducts , 'NumallDepartments'=>$NumallDepartments,'NumallContact' => $NumallContact,]);
     }
 
     /**
@@ -188,11 +188,11 @@ class AdminController extends Controller
         //
     }
 
-    public function allDonations(){
+    public function allContact(){
 
-        $donations = Donation::all();
+        $contact = contact::all();
 
-        return view('admin.donations' , ['donations' => $donations]);
+        return view('admin.donations' , ['contact' => $contact]);
     }
 
     public function allDepartmentspost(Request $request){
@@ -289,7 +289,7 @@ class AdminController extends Controller
         $user = User::find($id);
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->password = $request->password;
+        // $user->password = $request->password;
         $user->role = $request->role;
         $user->save();
         return redirect('admin/allUsers')->withSuccess('User Updated');
@@ -318,9 +318,8 @@ class AdminController extends Controller
         $tailor->password = $request->password;
         $image = base64_encode(file_get_contents($request->file('image')));
         $tailor->image = $image;
-        $certificate = base64_encode(file_get_contents($request->file('certificate')));
-        $tailor->certificate = $certificate;
-        $tailor->status = $request->status;
+        $tailor->city = $request->city;
+        $tailor->phone = $request->phone;
         $tailor->save();
         return redirect('admin')->withSuccess('tailor Updated');
     }
@@ -349,6 +348,13 @@ class AdminController extends Controller
         $tailor = tailor::destroy($id);
 
         return response()->json($tailor);
+    }
+
+    public function deletecontact($id)
+    {
+        $contact = contact::destroy($id);
+
+        return response()->json($contact);
     }
 
     public function deleteProduct($id)

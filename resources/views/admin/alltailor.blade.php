@@ -40,7 +40,8 @@
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
                 <th scope="col">Email</th>
-                <th scope="col">Status</th>
+                <th scope="col">Phone</th>
+                <th scope="col">City</th>
                 <th scope="col">Actions</th>
             </tr>
             </thead>
@@ -50,11 +51,12 @@
                     <th scope="row">{{$tailors['id']}}</th>
                     <td>{{$tailors['name']}}</td>
                     <td>{{$tailors['email']}}</td>
-                    <td>{{$tailors['status']}}</td>
+                    <td>0{{$tailors['phone']}}</td>
+                    <td>{{$tailors['city']}}</td>
                     <td>
                         <div>
                             <a class="fa-solid fa-user-pen me-2" style="color:green" href="/admin/edittailor/{{$tailors['id']}}"></a>
-                            <a class="fa-solid fa-trash" style="color: red" onclick="deletetailor(this,{{$tailors['id']}})"></a>
+                            <a class="fa-solid fa-trash" style="color: red; cursor: pointer;" onclick="deletetailor(this,{{$tailors['id']}})"></a>
                         </div>
                     </td>
                 </tr>

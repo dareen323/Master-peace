@@ -49,9 +49,9 @@
                   <div class="container">
             
                    
-                    <a class="navbar-brand" href="/"><span > <img src="./../../../images1/sewing-house-low-resolution-logo-white-on-transparent-background (1).png" style="width:100px"></span><small></small></a>
+                    <a class="navbar-brand" href="/"><span > <img src="./../../../images1/1.png" style="width:100px"></span><small></small></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="oi oi-menu"></span> Menu
+                      <span style="color:black" class="oi oi-menu"></span> Menu
                     </button>
                     <div class="collapse navbar-collapse" id="ftco-nav">
                       <ul class="navbar-nav ml-auto align-items-center">
@@ -229,7 +229,6 @@
 <!-- Back to Top -->
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
  <script src="js/jquery.min.js"></script>
 <script src="js/jquery-migrate-3.0.1.min.js"></script>
 <script src="js/popper.min.js"></script>

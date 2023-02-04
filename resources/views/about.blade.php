@@ -1,6 +1,13 @@
 @extends('layout')
 
 @section('content')
+<style>
+    @media (max-width: 768px) {
+    p {
+       color: black !important;
+    }}
+    </style>
+
 <section class="home-slider owl-carousel">
 
     <div class="slider-item" style="background-image: url(https://images.unsplash.com/photo-1586216583179-20b23ef9dd5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1236&q=80">

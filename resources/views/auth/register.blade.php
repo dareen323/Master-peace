@@ -167,7 +167,7 @@
 
                 </div>
        <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('registertailor') }}">
+                <a class="underline text-md text-gray-700 hover:text-gray-900" href="{{ route('registertailor') }}">
                     {{ __('Are you A Tailor?') }}
                 </a>
               </form>

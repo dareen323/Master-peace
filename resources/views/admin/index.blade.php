@@ -54,15 +54,14 @@
             <i class="bx bx-plus-medical" style="color:#1D2A4D;"></i>
             <span class="mx-2" style="color:#1D2A4D;">All Appointments</span>
         </a>
-        <a href="/admin/allOrder" class="nav-link">
             {{-- <i class='bx bx-package' style="color:#1D2A4D;"></i>
             <span class="mx-2" style="color:#1D2A4D;">All Orders</span>
         </a> --}}
 
-        {{-- <a href="/admin/allDonations" class="nav-link">
+        <a href="/admin/allContact" class="nav-link">
             <box-icon type='solid' name='donate-heart' style="color:#1D2A4D; height:20px; width:15px;"></box-icon>
-            <span class="mx-2" style="color:#1D2A4D;">All Donations</span>
-        </a> --}}
+            <span class="mx-2" style="color:#1D2A4D;">  Contact Form </span>
+        </a>
 
         <a href="/" class="nav-link">
             <i class="fa-solid fa-arrow-left" style="color:#1D2A4D;"></i>

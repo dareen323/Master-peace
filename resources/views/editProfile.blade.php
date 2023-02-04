@@ -44,12 +44,22 @@
                                         <input type="text" class="form-control" name="City" id=""
                                                value="{{$userinfo->city}}" aria-describedby="emailHelp">
                                     </div>
-                                 
+                                   
                                     <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Address</label>
+                                        <input type="text" class="form-control" name="address" id=""
+                                               value="{{$userinfo->address}}" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleInputEmail1" class="form-label">Phone</label>
+                                        <input type="number" class="form-control" name="phone" id=""
+                                               value="{{$userinfo->phone}}" aria-describedby="emailHelp">
+                                    </div>
+                                    {{-- <div class="mb-3">
                                         <label for="password" class="form-label">New Password</label>
                                         <input type="Password" class="form-control" name="password" id="password"
                                                aria-describedby="Password" value="{{$userinfo->password}}">
-                                    </div>
+                                    </div> --}}
                                  
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 @endforeach
