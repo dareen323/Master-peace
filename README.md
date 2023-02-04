@@ -24,7 +24,7 @@ The web app will also contain an admin dashboard to manage the website content a
 ### important links :
  * https://trello.com/b/fqvtkbHE/sewing-house {trello}
  * https://docs.google.com/document/d/1BbfHgGaNI6BR3BmOKqLSNviqa6ZJXu24/edit {decumention}
- * (https://docs.google.com/presentation/d/1NcKmthhKxMPdBgzFcAZUVOw0mK2P0GBv/edit?usp=sharing&ouid=113993863121305179247&rtpof=true&sd=true) {presention}
+ * https://docs.google.com/presentation/d/1fOU2IGMHg5AX9-gnYRXB9cNzYB8hITqA/edit#slide=id.p1 {presention}
  * https://www.figma.com/file/lpjfO0bP4WtrJHh2elSTfN/sewing?node-id=0%3A1 {figma}
  * https://docs.google.com/document/d/15-20qcRO6vfDurdkk1xNGKeXJfuE4ZlE/edit {brief}
  
